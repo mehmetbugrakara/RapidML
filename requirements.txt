@@ -1,0 +1,12 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+PySimpleGUI
+sweetviz
+pycaret
+xgboost
+lightgbm
+catboost
+joblib
+openpyxl
