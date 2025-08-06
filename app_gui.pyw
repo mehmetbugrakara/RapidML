@@ -102,7 +102,6 @@ class QuickModelerApp:
 
         # Mevcutsa bu satırlar zaten olmalı:
         frm.columnconfigure(1, weight=1)
-        #frm.columnconfigure(2, weight=0)
 
     def browse_train(self):
         path = filedialog.askopenfilename(filetypes=[("CSV/Excel","*.csv;*.xlsx")])
@@ -141,8 +140,7 @@ class QuickModelerApp:
             self.progress["value"] = 10
             self.log_message("Generating EDA report...")
 
-            report_path = self.output_dir.get() +  "report.html"
-            #report_path = os.path.join(self.output_dir.get(), "report.html")
+            report_path = os.path.join(self.output_dir.get(), "report.html")
             generate_report(train_df, report_path)
 
             self.progress["value"] = 30
